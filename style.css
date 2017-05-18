@@ -1,12 +1,42 @@
 * {box-sizing:border-box}
 
 body {
-  font-family: Verdana,sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
   margin:0;
+}
+
+hr {
+   border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(153, 204, 255, 0), rgba(153, 204, 255, 1), rgba(153, 204, 255, 0));
 }
 
 #content-container {
   margin:40px;
+}
+
+.inline {
+  display: inline;
+}
+
+h3 {
+  font-size: xx-large;
+  font-style: italic;
+  color: #6699cc;
+}
+
+dt, li {
+  margin-top: 40px;
+  font-size: x-large;
+}
+
+ol li:before,
+dt .deemphasize {
+  color: #888888;
+}
+
+dd {
+  margin: 20px;
 }
 
 img.center {
