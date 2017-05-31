@@ -1,5 +1,9 @@
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function () {
+    history.pushState(null, null, document.URL);
+});
+
 $( document ).ready(function() {
-  document.onHistoryGo = function() { return false; }
 
   $(".menu-button[data-menu=home]").addClass("active");
   $(".menu-image").hide();
