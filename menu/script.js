@@ -1,3 +1,5 @@
+document.onHistoryGo = function() { return false; }
+
 $( document ).ready(function() {
   $(".menu-button[data-menu=home]").addClass("active");
   $(".menu-image").hide();
@@ -27,3 +29,7 @@ $( document ).ready(function() {
     }
   );
 });
+
+function loadSubPage(page) {
+  $("#content-container").load(page);
+}
