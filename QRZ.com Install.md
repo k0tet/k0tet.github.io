@@ -54,5 +54,5 @@ Biography (source):
 
 <div class="de-corner-ribbon-font-black"><a href="https://www.qrz.com/db/ke0mhx">Frau</a> auch</div>
 </div>
-<object data="https://ke0lmq.github.io">Your browser doesn&rsquo;t support the object tag. Visit <a href="https://ke0lmq.github.io">https://ke0lmq.github.io</a> to view the content.</object>
+<object data="https://k0tet.github.io">Your browser doesn&rsquo;t support the object tag. Visit <a href="https://k0tet.github.io">https://k0tet.github.io</a> to view the content.</object>
 ```
