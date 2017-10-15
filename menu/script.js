@@ -1,26 +1,17 @@
-history.pushState(null, null, document.URL);
-window.addEventListener('popstate', function () {
-    history.pushState(null, null, document.URL);
-});
-
-$( document ).ready(function() {
-
-  $(".menu-button[data-menu=home]").addClass("active");
-  $(".menu-image").hide();
-  $activeImage = $(".menu-image[data-menu=home]").show();
-  $("#content-container").load("home/index.html");
-
-  $(".menu-button").click(
+$(document).ready(function() {
+  $(window).on('hashchange',
     function () {
+      var page = document.location.hash ? document.location.hash.substring(1) : "home";
+
       $(".menu-button").removeClass("active");
-      $(this).addClass("active");
+      $(".menu-button[data-menu=" + page + "]").addClass("active");
 
       $(".menu-image").hide();
-      $activeImage = $(".menu-image[data-menu=" + $(this).data("menu") + "]").show();
+      $activeImage = $(".menu-image[data-menu=" + page + "]").show();
 
-      $("#content-container").load($(this).data("menu") + "/index.html");
+      $("#content-container").load(page + "/index.html");
     }
-  );
+  ).trigger('hashchange');
 
   $(".menu-button").hover(
     function () {
