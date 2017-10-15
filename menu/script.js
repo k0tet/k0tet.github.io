@@ -1,7 +1,10 @@
 $(document).ready(function() {
   $(window).on('hashchange',
     function () {
-      var page = document.location.hash ? document.location.hash.substring(1) : "home";
+      var page = document.location.hash.substring(1);
+      if (page == "" || !$(".menu-button[data-menu=" + page + "]").length) {
+        page = "home";
+      }
 
       $(".menu-button").removeClass("active");
       $(".menu-button[data-menu=" + page + "]").addClass("active");
