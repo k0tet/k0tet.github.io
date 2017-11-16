@@ -2,17 +2,23 @@ $(document).ready(function() {
   $(window).on('hashchange',
     function () {
       var page = document.location.hash.substring(1);
-      if (page == "" || !$(".menu-button[data-menu=" + page + "]").length) {
+      var section = page.split("/")[0];
+      if (section === "" || !$(".menu-button[data-menu=" + section + "]").length) {
         page = "home";
+        section = "home";
       }
 
+      if (page === section) {
+          page = page + "/index";
+      }
+      
       $(".menu-button").removeClass("active");
-      $(".menu-button[data-menu=" + page + "]").addClass("active");
+      $(".menu-button[data-menu=" + section + "]").addClass("active");
 
       $(".menu-image").hide();
-      $activeImage = $(".menu-image[data-menu=" + page + "]").show();
+      $activeImage = $(".menu-image[data-menu=" + section + "]").show();
 
-      $("#content-container").load(page + "/index.html");
+      $("#content-container").load(page + ".html");
     }
   ).trigger('hashchange');
 
