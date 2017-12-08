@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Status: In progress
+    </p>
+    <h3>TNC Modem - APRS with an old smart phone, arduino, and a hand held radio</h3>
+    <p>
+      I am building a slightly modified version of the Micro Modem by Mark Quist 
+      (<a href="http://unsigned.io/projects/micromodem/">http://unsigned.io/projects/micromodem/</a>).
+      My goal are to adapt the circuit to be used with an Arduino Nano driving a Baofeng UV-82.  
+      Then hookup an old android phone to the tnc modem and use the ARPdroid app to send and receive
+      ARPS positions and messages.
+    </p>
+    <p>  
+      <a href="antennas/20171205_002838.jpg"><img src="antennas/20171205_002838-small.png"></a>
+      <i>Breadboard test setup</i>
+    </p>
+    <p>
+      Pre-build firmware for the atmega328p chip (which the Arduino Nano uses) can be found in at
+      <a href="https://github.com/markqvist/MicroAPRS/tree/master/precompiled">https://github.com/markqvist/MicroAPRS/tree/master/precompiled</a>.
+      One can also build the firmware
+      from source, which is required for Arduino boards with different microprocessors.  In that case 
+      check the Makefile and device.h have the desired configuration.  
+    </p>
+    <p>
+      <strong>Windows OS Notes</strong>
+      <dl>
+        <dt>Uploading firmware to the Arduino:</dt>
+        <dd>Use ArduinoSchetchUploader (<a href="https://github.com/christophediericx/ArduinoSketchUploader">https://github.com/christophediericx/ArduinoSketchUploader</a>)
+            to upload the firmware (aka sketch).</dd>          
+        <dt>Compiling Arduino firmware:</dt>
+        <dd>Use WinAVR (<a href="http://winavr.sourceforge.net/">http://winavr.sourceforge.net/</a>) 
+            to build the firmware from source using <code>make clean all</code> command.</dd>
+      </dl>
+    </p>
+    <p>
+      <strong>Current Issues</strong>
+      <dl>
+        <dt>Sending ARPS:</dt>
+        <dd>Sometimes sent ARPS message are not received by my local iGate or other nodes in the neighbourhood. 
+            I'm not sure if there is a setup issue or APRS is naturally that flakey.</dd>          
+        <dt>Receive ARPS message:</dt>
+        <dd>ARPS messages don't seem to be received.  I'm not sure if that's a hardware or software issue.</dd>
+      </dl>
+    </p>
+    </body>
+</html>
