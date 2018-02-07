@@ -2,6 +2,9 @@ $(document).ready(function() {
   $(window).on('hashchange',
     function () {
       var page = document.location.hash.substring(1);
+      if (page.startsWith("!")) {
+          page = page.substr(1);
+      }
       var section = page.split("/")[0];
       if (section === "" || !$(".menu-button[data-menu=" + section + "]").length) {
         page = "home";
