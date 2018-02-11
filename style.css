@@ -11,6 +11,15 @@ hr {
    background-image: linear-gradient(to right, rgba(153, 204, 255, 0), rgba(153, 204, 255, 1), rgba(153, 204, 255, 0));
 }
 
+blockquote {
+  font: italic 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
+
 #content-container {
   margin:40px;
 }
