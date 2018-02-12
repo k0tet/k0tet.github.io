@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <p>
-      Status: In progress
-    </p>
-    <h3>TNC Modem - APRS with an old smart phone, arduino, and a hand held radio</h3>
+    <h3 class="status-active">TNC Modem - APRS with an old smart phone, arduino, and a hand held radio</h3>
     <p>
       I am building a slightly modified version of the Micro Modem by Mark Quist 
       (<a href="http://unsigned.io/projects/micromodem/">http://unsigned.io/projects/micromodem/</a>).
@@ -13,8 +10,7 @@
       ARPS positions and messages.
     </p>
     <p>  
-      <a href="projects/20171205_002838.jpg"><img src="projects/20171205_002838-small.jpg" /></a>
-      <i>Breadboard test setup</i>
+      <a href="projects/20171205_002838.jpg"><img alt="breadboard test setup" src="projects/20171205_002838-small.jpg" /></a><br />
     </p>
     <p>
       Pre-build firmware for the atmega328p chip (which the Arduino Nano uses) can be found in at
@@ -25,24 +21,24 @@
     </p>
     <p>
       <strong>Windows OS Notes</strong>
-      <dl>
-        <dt>Uploading firmware to the Arduino:</dt>
+      <ul>
+        <li>Uploading firmware to the Arduino:</li>
         <dd>Use ArduinoSchetchUploader (<a href="https://github.com/christophediericx/ArduinoSketchUploader">https://github.com/christophediericx/ArduinoSketchUploader</a>)
             to upload the firmware (aka sketch).</dd>          
-        <dt>Compiling Arduino firmware:</dt>
+        <li>Compiling Arduino firmware:</li>
         <dd>Use WinAVR (<a href="http://winavr.sourceforge.net/">http://winavr.sourceforge.net/</a>) 
             to build the firmware from source using <code>make clean all</code> command.</dd>
-      </dl>
+      </ul>
     </p>
     <p>
       <strong>Current Issues</strong>
-      <dl>
-        <dt>Sending ARPS:</dt>
+      <ul>
+        <li>Sending ARPS:</li>
         <dd>Sometimes sent ARPS message are not received by my local iGate or other nodes in the neighbourhood. 
             I'm not sure if there is a setup issue or APRS is naturally that flakey.</dd>          
-        <dt>Receive ARPS message:</dt>
+        <li>Receive ARPS message:</li>
         <dd>ARPS messages don't seem to be received.  I'm not sure if that's a hardware or software issue.</dd>
-      </dl>
+      </ul>
     </p>
     </body>
 </html>
