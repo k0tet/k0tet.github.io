@@ -48,9 +48,8 @@ dd {
   margin: 20px;
 }
 
-img.center {
-  margin: 10px auto;
-  display: block;
+div.center {
+  text-align: center
 }
 
 /* Status Indicators */
