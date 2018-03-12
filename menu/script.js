@@ -21,9 +21,10 @@ $(document).ready(function() {
       $(".menu-image").hide();
       $activeImage = $(".menu-image[data-menu=" + section + "]").show();
 
-      $("#content-container").load(page + ".html");
-      
-      updateWebStats( page + ".html");
+      $("#content-container").load(page + ".html", function() {
+          document.title = "K0TET :: " + $("#content-container h3").first().text();
+          updateWebStats( page + ".html");
+      });
     }
   ).trigger('hashchange');
 
