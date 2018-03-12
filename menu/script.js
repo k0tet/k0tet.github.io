@@ -1,8 +1,15 @@
+if (!String.prototype.startsWith) {
+  String.prototype.startsWith = function(searchString, position) {
+    position = position || 0;
+    return this.indexOf(searchString, position) === position;
+  };
+}
+
 $(document).ready(function() {
   $(window).on('hashchange',
     function () {
       var page = document.location.hash.substring(1);
-      if (page.startsWith("!")) {
+      if (page.substr(0,1) == "!") {
           page = page.substr(1);
       }
       var section = page.split("/")[0];
