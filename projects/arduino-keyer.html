@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3 class="status-completed">Arduino Keyer</h3>
+	<p>
+	  <h4>Arduino Exploratory Keyer v1</h4>
+	  <p>
+	    This keyer was purely exploratory. I came across the NanoKeyer website, looked at the schematics and build this very simplistic keyer.  
+		I quickly discovered the potential of such a keyer in the aid to learn Morse code.
+	  </p>
+	  <a href="projects/arduino-exploratory-keyer-v1.jpg"><img alt="First breadboard version of the Arduino keyer" src="projects/arduino-exploratory-keyer-v1-small.jpg"></a>
+    </p>
+    <p>
+	  <h4>Arduino Practice Keyer v2</h4>
+      <p>
+	    To learn Morse code I primarily wanted to see what characters I'm sending, kind of like a coach that tells me when I'm doing it wrong.  
+		For that something more permanent than sa breadboard build was necessary.    The pin spacing of the jacks didn't fit the spacing of the 
+		prototyping board so I had to be a bit inventive.
+	  </p>
+	  <br />
+	  <a href="projects/dummy-load-top.jpg"><img alt="top view of dummy load" src="projects/dummy-load-top-small.jpg"></a>
+	  <a href="projects/dummy-load-bottom.jpg"><img alt="bottom view of dummy load" src="projects/dummy-load-bottom-small.jpg"></a><br>
+    </p>
+	<p>
+	  <h4>Arduino Practice Keyer v3</h4>
+	  <p>
+	    I wanted to make another keyer as simple as possible for my CW Academy buddy.  This time I had a 3.5mm jack that fits the spacing.  
+		For the 6.3mm jack I bent the middle pins so that they would not have to go through the board but instead are held in place with a wire 
+		bridge soldered on.  This worked out quite well.  The strip-board also simplified the wiring I had to do.
+	  </p>
+      <h5>Detailed board description:</h5>
+	  <p>
+	    The ArduinoNano is the core/brain of the keyer.  It is attached to the board via two 15 pin female headers.  This is done so that the 
+		Nano could easily be used for other purposed.  I added a 10uF electrolytic capacitor (C1) from the reset pin to ground.  This prevents 
+		accidental programming while the Arduino Nano is in the keyer board. 
+      </p>
+	  <p>
+        The two pin header allows for external power.  This is completely optional and allows the keyer to be used without a computer.  
+		7 to 12 Volts can be used.  I used a 2x2 female header for the 9V battery connector.  This prevents from switching the polarity by accident.
+	  </p>
+	  <p>
+        The 6.3mm stereo jack is used to connect a straight key or iambic paddle.  The two 10nF capacitors (C2, C3) smooths out the electrical 
+		signal from the key.
+      </p>
+	  <p>
+        The 3.5mm switched stereo jack allows to use active speakers.  Active speakers sound quite a bit better than the build in piezo buzzer.  
+		However, the build in speaker is nice to have.  Be sure to use a passive piezo buzzer as the Arduino will generate the proper frequency 
+		for it.  Using an active buzzer will sound horrid and frequency adjustments of the keyer won't really work.
+	  </p>
+      <h5>Software: Arduino Sketch</h5>
+	  <p>
+	    Anthony (K3NG) has created the feature rich keyer software that I've been using as well. 
+	  </p>
+      <p>
+	    To build the sketch I use the following settins:
+        <ul>
+          <li>keyer_hardware.h
+            <dd>#define HARDWARE_NANOKEYER_REV_D</dd></li>
+          <li>keyer_features_and_options_nanokeyer_rev_d.h
+            <dd>#define FEATURE_COMMAND_LINE_INTERFACE<br />#define FEATURE_SERIAL_HELP</dd></li>
+        </ul>
+        That pretty much maxes out the Arduino Nano.  If you want to use more feature the Arduino Mega 2560 is needed.
+	  </p>
+	  <p>
+	     Software link: <a href="https://github.com/k3ng/k3ng_cw_keyer">https://github.com/k3ng/k3ng_cw_keyer</a>
+	  </p>
+      <h5>Software: Serial Terminal Console</h5>
+	  <p>
+	    Any serial terminal application works on your computer.  On windows I've been using Arduino IDE's Serial monitor and Putty with the following settings:
+		<li>Baud rate: 115200</li>
+		<li>Data bits: 8</li>
+		<li>Parity check: none</li>
+		<li>Stop bits: 1</li>
+		<li>Flow control: Xon/Xoff</li>
+	  </p>
+	</p>
+  </body>
+</html>
