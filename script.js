@@ -1,17 +1,46 @@
-if (!String.prototype.startsWith) {
-  String.prototype.startsWith = function(searchString, position) {
-    position = position || 0;
-    return this.indexOf(searchString, position) === position;
-  };
+$(document).on("click", "a[href]", function (event) {
+    if ((event.target.host === location.host) && (event.target.pathname.substr(0,9) !== "/content/")) {
+        event.preventDefault();
+        var page = $(this).attr("href");
+        history.pushState({page: page}, "", page);
+		renderPage(page);
+	}
+});
+
+window.addEventListener("popstate", function (event) {
+    renderPage(event.state.page);
+});
+
+var page = "/";
+if (sessionStorage.path) {
+	page = sessionStorage.path;
+	delete sessionStorage.path;
+} else if (location.hash.substr(0,2) === "#!") {
+	page = location.hash.substr(2);
 }
 
+history.replaceState({page: page}, "", page);
+
 $(document).ready(function() {
-  $(window).on('hashchange',
+  $(".menu-button").hover(
     function () {
-      var page = document.location.hash.substring(1);
-      if (page.substr(0,1) == "!") {
+      $activeImage.hide();
+      $(".menu-image[data-menu=" + $(this).data("menu") + "]").show();
+    },
+    function () {
+      $(".menu-image[data-menu=" + $(this).data("menu") + "]").hide();
+      $activeImage.show();
+    }
+  );
+
+  renderPage(page);
+});
+
+function renderPage(page) {
+      if (page.substr(0,1) == "/") {
           page = page.substr(1);
       }
+
       var section = page.split("/")[0];
       if (section === "" || !$(".menu-button[data-menu=" + section + "]").length) {
         page = "home";
@@ -28,25 +57,15 @@ $(document).ready(function() {
       $(".menu-image").hide();
       $activeImage = $(".menu-image[data-menu=" + section + "]").show();
 
-      $("#content-container").load(page + ".html", function() {
+      $("#content-container").load("/content/" + page + ".html", function(response, status, xhr) {
+		  // check status and display error if load failed;
           document.title = "K0TET :: " + $("#content-container h3").first().text();
           updateWebStats( page + ".html");
       });
     }
-  ).trigger('hashchange');
 
-  $(".menu-button").hover(
-    function () {
-      $activeImage.hide();
-      $(".menu-image[data-menu=" + $(this).data("menu") + "]").show();
-    },
-    function () {
-      $(".menu-image[data-menu=" + $(this).data("menu") + "]").hide();
-      $activeImage.show();
-    }
-  );
-});
 
+  
 function updateWebStats(page) {
     if (typeof ga !== 'function') {
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
