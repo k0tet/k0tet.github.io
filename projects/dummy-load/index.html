@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[K0TET]</title>
+    <meta name="description" content="Offial page of the amateur radio (ham) station K0TET featuring experiments, projects, publications, blog and station information">
+    <meta name="google-site-verification" content="dv5RKiVqsej9VWfRGw1rU6y43fp3Spg9ULgLUUZQLtQ" />
+    <meta name="msvalidate.01" content="36B677FC5749023331AF1AAD8126392C" />
+    <script src="/lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/menu/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/menu/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="menu-container">
+      <div class="menu-image fade" data-menu="home">
+        <img src="/menu/home.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="qsl">
+        <img src="/menu/qsl.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="antennas">
+        <img src="/menu/antennas.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="station">
+        <img src="/menu/station.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="projects">
+        <img src="/menu/projects.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="publications">
+        <img src="/menu/publications.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="journal">
+        <img src="/menu/journal.png" style="width:100%">
+      </div>
+      <br />
+      <div style="text-align:center">
+        <a class="menu-button" data-menu="home" href="/">Home</a>
+        <a class="menu-button" data-menu="qsl" href="/qsl">QSL</a>
+        <a class="menu-button" data-menu="antennas" href="/antennas">Antennas</a>
+        <a class="menu-button" data-menu="station" href="/station">Station</a>
+        <a class="menu-button" data-menu="projects" href="/projects">Projects</a>
+        <a class="menu-button" data-menu="publications" href="/publications">Publication</a>
+        <a class="menu-button" data-menu="journal" href="/journal">Journal</a>
+      </div>
+    </div>
+
+    <hr />
+    <div id="content-container">
+    
+    <h3 class="status-completed">Dummy Load</h3>
+    <p>
+      I wanted a simple dry dummy load for testing and to tinker that's capable to take a decent amount of power from the transmitter.
+      This was a quick little evening project once I picked out and received the parts.
+    </p>
+	<p>
+	  <h4>Parts:</h4>
+	  <ul>
+	    <li>Heatsink Wakefield 423K 140x120x67mm</li>
+		<li>50 Ohm 250N50 Resistor</li>
+		<li>Type N Female Panel Mount</li>
+		<li>Thermal Paste</li>
+		<li>3x screws and nuts</li>
+	  </ul>
+	  Total cost was about $47 dollars for <u>two</u> dummy load. I only build one so far. The heatsink is the most expensive part by far.
+	</p>
+    <p>
+	  <h4>Construction:</h4>
+      The construction was quite easy.  I opted to share a screw with the resistor and coax connector for simplicity and 
+      ease of ground connection.<br />	  
+	  <br />
+	  <a href="dummy-load-top.jpg"><img alt="top view of dummy load" src="dummy-load-top-small.jpg"></a>
+	  <a href="dummy-load-bottom.jpg"><img alt="bottom view of dummy load" src="dummy-load-bottom-small.jpg"></a><br>
+    </p>
+    <p>
+	  <h4>Results:</h4>
+      The SWR of the dummy load is perfect for HF and quite good for higher frequencies.<br />
+	  <br />
+	  SWR plot:<br />
+	  <a href="dummy-load-swr.jpg"><img alt="swr chart" src="dummy-load-swr-small.jpg"/></a><br />
+	  <br />
+	  Impedance plot:<br />
+	  <a href="dummy-load-impedance.jpg"><img alt="swr chart" src="dummy-load-impedance-small.jpg"/></a><br />
+	  <br />
+	  AntScope file: <a href="dummy-load.antdata">dummy-load.antdata</a><br />
+	  AntScope2 file: <a href="dummy-load.asd">dummy-load.asd</a><br />
+	  <i>(AntScope can be downloaded at the <a href="https://rigexpert.com/products/software/">RigExpert</a> website for free.)</i><br />
+	  <br />
+	  So far I have used the dummy load with a Boafeng on 2m and 70cm using 5W and Icom 7300 at 30% power using SSB on 20m band.  I haven't
+	  noticed any increased temperature of the resistor.
+    </p>
+    <p>
+	  <h4>Potential enhancement:</h4>
+	  <ul>
+	    <li>Adding a wattmeter circuit would be nice.</li>
+		<li>RF shielding on the bottom</li>
+	  </ul>
+	</p>
+
+    </div>
+  </body>
+</html>

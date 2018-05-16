@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[K0TET]</title>
+    <meta name="description" content="Offial page of the amateur radio (ham) station K0TET featuring experiments, projects, publications, blog and station information">
+    <meta name="google-site-verification" content="dv5RKiVqsej9VWfRGw1rU6y43fp3Spg9ULgLUUZQLtQ" />
+    <meta name="msvalidate.01" content="36B677FC5749023331AF1AAD8126392C" />
+    <script src="/lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/menu/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/menu/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="menu-container">
+      <div class="menu-image fade" data-menu="home">
+        <img src="/menu/home.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="qsl">
+        <img src="/menu/qsl.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="antennas">
+        <img src="/menu/antennas.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="station">
+        <img src="/menu/station.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="projects">
+        <img src="/menu/projects.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="publications">
+        <img src="/menu/publications.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="journal">
+        <img src="/menu/journal.png" style="width:100%">
+      </div>
+      <br />
+      <div style="text-align:center">
+        <a class="menu-button" data-menu="home" href="/">Home</a>
+        <a class="menu-button" data-menu="qsl" href="/qsl">QSL</a>
+        <a class="menu-button" data-menu="antennas" href="/antennas">Antennas</a>
+        <a class="menu-button" data-menu="station" href="/station">Station</a>
+        <a class="menu-button" data-menu="projects" href="/projects">Projects</a>
+        <a class="menu-button" data-menu="publications" href="/publications">Publication</a>
+        <a class="menu-button" data-menu="journal" href="/journal">Journal</a>
+      </div>
+    </div>
+
+    <hr />
+    <div id="content-container">
+    
+    <h3 class="status-completed">Arduino Keyer</h3>
+	<p>
+	  <h4>Arduino Exploratory Keyer v1</h4>
+	  <p>
+	    This keyer was purely exploratory. I came across the NanoKeyer website, looked at the schematics and build this very simplistic keyer.  
+		I quickly discovered the potential of such a keyer in the aid to learn Morse code.
+	  </p>
+	  <a href="arduino-exploratory-keyer-v1.jpg"><img alt="First breadboard version of the Arduino keyer" src="arduino-exploratory-keyer-v1-small.jpg"></a>
+    </p>
+    <p>
+	  <h4>Arduino Practice Keyer v2</h4>
+      <p>
+	    To learn Morse code I primarily wanted to see what characters I'm sending, kind of like a coach that tells me when I'm doing it wrong.  
+		For that something more permanent than sa breadboard build was necessary.    The pin spacing of the jacks didn't fit the spacing of the 
+		prototyping board so I had to be a bit inventive.
+	  </p>
+	  <br />
+	  <a href="arduino-practice-keyer-v2.jpg"><img alt="arduino practice keyer v2" src="arduino-practice-keyer-v2-small.jpg"></a>
+      <br />
+	  <a href="arduino-practice-keyer-v2-board-adapter-1.jpg"><img alt="hand crafted adapter for pin spacing of jacks" src="arduino-practice-keyer-v2-board-adapter-1-small.jpg"></a>
+	  <a href="arduino-practice-keyer-v2-board-adapter-2.jpg"><img alt="hand crafted adapter for pin spacing of jacks" src="arduino-practice-keyer-v2-board-adapter-2-small.jpg"></a>
+	  <a href="arduino-practice-keyer-v2-board-adapter-3.jpg"><img alt="hand crafted adapter for pin spacing of jacks" src="arduino-practice-keyer-v2-board-adapter-3-small.jpg"></a>
+    </p>
+	<p>
+	  <h4>Arduino Practice Keyer v3</h4>
+	  <p>
+	    I wanted to make another keyer as simple as possible for my CW Academy buddy.  This time I had a 3.5mm jack that fits the spacing.  
+		For the 6.3mm jack I bent the middle pins so that they would not have to go through the board but instead are held in place with a wire 
+		bridge soldered on.  This worked out quite well.  The strip-board also simplified the wiring I had to do.
+	  </p>
+	  <a href="arduino-practice-keyer-v3.jpg"><img alt="arduino practice keyer v3" src="arduino-practice-keyer-v3-small.jpg"></a>
+	  <br />
+	  <a href="arduino-practice-keyer-v3-top.jpg"><img alt="arduino practice keyer v3 top view" src="arduino-practice-keyer-v3-top-small.jpg"></a>
+	  <a href="arduino-practice-keyer-v3-bottom.jpg"><img alt="arduino practice keyer v3 bottom view" src="arduino-practice-keyer-v3-bottom-small.jpg"></a>
+      <h5>Detailed board description:</h5>
+	  <p>
+	    The ArduinoNano is the core/brain of the keyer.  It is attached to the board via two 15 pin female headers.  This is done so that the 
+		Nano could easily be used for other purposed.  I added a 10uF electrolytic capacitor (C1) from the reset pin to ground.  This prevents 
+		accidental programming while the Arduino Nano is in the keyer board. 
+      </p>
+	  <p>
+        The two pin header allows for external power.  This is completely optional and allows the keyer to be used without a computer.  
+		7 to 12 Volts can be used.  I used a 2x2 female header for the 9V battery connector.  This prevents from switching the polarity by accident.
+	  </p>
+	  <p>
+        The 6.3mm stereo jack is used to connect a straight key or iambic paddle.  The two 10nF capacitors (C2, C3) smooths out the electrical 
+		signal from the key.
+      </p>
+	  <p>
+        The 3.5mm switched stereo jack allows to use active speakers.  Active speakers sound quite a bit better than the build in piezo buzzer.  
+		However, the build in speaker is nice to have.  Be sure to use a passive piezo buzzer as the Arduino will generate the proper frequency 
+		for it.  Using an active buzzer will sound horrid and frequency adjustments of the keyer won't really work.
+	  </p>
+      <h5>Software: Arduino Sketch</h5>
+	  <p>
+	    Anthony (K3NG) has created the feature rich keyer software that I've been using as well. 
+	  </p>
+      <p>
+	    To build the sketch I use the following settins:
+        <ul>
+          <li>keyer_hardware.h
+            <dd>#define HARDWARE_NANOKEYER_REV_D</dd></li>
+          <li>keyer_features_and_options_nanokeyer_rev_d.h
+            <dd>#define FEATURE_COMMAND_LINE_INTERFACE<br />#define FEATURE_SERIAL_HELP</dd></li>
+        </ul>
+        That pretty much maxes out the Arduino Nano.  If you want to use more feature the Arduino Mega 2560 is needed.
+	  </p>
+	  <p>
+	     Software link: <a href="https://github.com/k3ng/k3ng_cw_keyer">https://github.com/k3ng/k3ng_cw_keyer</a>
+	  </p>
+      <h5>Software: Serial Terminal Console</h5>
+	  <p>
+	    Any serial terminal application works on your computer.  On windows I've been using Arduino IDE's Serial monitor and <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">Putty</a> with the following settings:
+		<ul>
+		  <li>Baud rate: 115200</li>
+		  <li>Data bits: 8</li>
+		  <li>Parity check: none</li>
+		  <li>Stop bits: 1</li>
+		  <li>Flow control: Xon/Xoff</li>
+		</ul>
+	  </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/EfIsDVWCrAw?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	</p>
+
+    </div>
+  </body>
+</html>

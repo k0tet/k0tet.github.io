@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[K0TET]</title>
+    <meta name="description" content="Offial page of the amateur radio (ham) station K0TET featuring experiments, projects, publications, blog and station information">
+    <meta name="google-site-verification" content="dv5RKiVqsej9VWfRGw1rU6y43fp3Spg9ULgLUUZQLtQ" />
+    <meta name="msvalidate.01" content="36B677FC5749023331AF1AAD8126392C" />
+    <script src="/lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/menu/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/menu/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="menu-container">
+      <div class="menu-image fade" data-menu="home">
+        <img src="/menu/home.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="qsl">
+        <img src="/menu/qsl.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="antennas">
+        <img src="/menu/antennas.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="station">
+        <img src="/menu/station.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="projects">
+        <img src="/menu/projects.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="publications">
+        <img src="/menu/publications.png" style="width:100%">
+      </div>
+      <div class="menu-image fade" data-menu="journal">
+        <img src="/menu/journal.png" style="width:100%">
+      </div>
+      <br />
+      <div style="text-align:center">
+        <a class="menu-button" data-menu="home" href="/">Home</a>
+        <a class="menu-button" data-menu="qsl" href="/qsl">QSL</a>
+        <a class="menu-button" data-menu="antennas" href="/antennas">Antennas</a>
+        <a class="menu-button" data-menu="station" href="/station">Station</a>
+        <a class="menu-button" data-menu="projects" href="/projects">Projects</a>
+        <a class="menu-button" data-menu="publications" href="/publications">Publication</a>
+        <a class="menu-button" data-menu="journal" href="/journal">Journal</a>
+      </div>
+    </div>
+
+    <hr />
+    <div id="content-container">
+    
+    <h3 class="inline">Journal</h3>
+    Highlights and other notables about my amateur radio activities.
+    <dl>
+      <dt> <span class="deemphasize">February 27, 2018:</span> MSK144 Ground Wave Scatter</dt>
+      <dd>
+        <p>This morning I saw some traffic including local on the 6m band (<a href="https://pskreporter.info/pskmap.html">PSK Reporter</a>).
+          Being very excited I wanted to check it out. Switched to MSK144, the mode people were using, and started listening.  I heard the
+          local station N0AN having a QSO.  I decided to call CQ since he didn't call CQ after his QSO.  At the end of the exchange I sent him 
+          the non traditional "FIRST MSK144" message.  He responded with his phone number and so we ended up chatting for quite a while.  I got 
+          some very good tips about operating MSK144:
+          <ul>
+            <li>15 second transmit/receive windows
+              <dd>WSJT-X was still set to 30 seconds.  But it should be set to "T/R 15 s"</dd></li>
+            <li>Frequency tolerance of 200
+              <dd>WSJT-X was still set to 20 but my computer can handle much better than that. The green "Receiving ##%" status bar on the bottom
+              left helps to determine how high the "F Tol" and decoding depth settings can be set.  Suggested settings are "Decode -> Deep" and "F Tol 200".</dd></li>
+            <li>TX even/1st toward East and odd/2nd toward west
+              <dd>This is a convention to follow. Also operate at the same time sequence as other local station, because while you transmit the other station's
+              receiver will be overloaded.  Same applies to you, you won't receive anything but the other local station.</dd></li>
+            <li> Noise blanker is OK
+              <dd>There is no issue with using the noise blanker aggressively</dd></li>
+            <li>Run full power
+              <dd>I was transmitting at about 30W.  Unlike with other data modes here you're better off transmitting with as much power 
+              you have available. 100W apparently is considered low power.</dd></li>
+            <li>Ping Jockey
+              <dd>Monitor and schedule QSOs with <a href="https://www.pingjockey.net/cgi-bin/pingtalk/">Ping Jockey</a>.  It's a very useful real time chat
+              for MSK144.</dd></li>
+            <li>Activity is in the mornings
+              <dd>Best time for QSOs are in the mornings (5/6am).  That's when it's most likely that meteors and hams hang around.</dd></li>
+            <li>Read the manual
+              <dd>Tip from me, it's pretty good. <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-1.9.0.html#_msk144">WSJT-X Manual</a></dd></li>
+            <li>Antenna
+              <dd>My dipole is probably the worst antenna except for a dummy load but I might be able to talk to some of the better stations.</dd></li>
+          </ul>
+      </dd>
+      
+      <dt> <span class="deemphasize">February 11, 2018:</span> SEA 1625 Antenna Tuner</dt>
+      <dd>
+        <p>I came across the SEA 1625 automatic antenna tuner for a really good price on ebay. The
+          seller mentioned that it's in good working condition but nothing more for the auction. I
+          tried finding some information on the Internet about it but no luck.  So I inquired with
+          SeaComCorp.com about the tuner.  I got the really helpful and quick answer back:
+          <blockquote>
+            The 1625 was a slave tuner, made to operate only with the model 225 SSB radio. All of its 
+            detection, processing, and memory are performed inside the 225 radio, and the tuner operates
+            off of serial commands from the radio that are series-parallel converted in the tuner to 
+            drive the element relays.<br />  
+            If you don't have a 225 series of SSB radio, the tuner is useless. If you do have a 225,
+            the manual is highly recommended.
+          </blockquote></p>
+      <div class="center">
+        <a href="2018-02-11-sea-1625.jpg"><img src="2018-02-11-sea-1625-small.jpg" alt="SEA 1625 Tuner" /></a>
+      </div>
+      <p>I forwarded the response to the ebay seller so that they have an idea of what they are selling.
+        But of course the seller didn't care and instead was irritated by me contacting them. Other people
+        have started a bidding war.  I hope they know what they are getting because it's not an small ammount
+        of money anymore.</p>
+      <p>This whole thing brings me to the fact that used amateur radio equipment is overpriced and lots of 
+        people seem to take advantage of that and sell untested and questionable equipment for hight prices.
+        It's probably a very profitable business for them. And yes, that includes licensed amateur radio guys 
+        that could easily test the equipment.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">January 21, 2018:</span> Winter tinkering</dt>
+      <dd>
+        <p>Ad-hoc antennas don't quite work in the middle of the winter here in Iowa.  Having
+          the sliding patio door open to run the coax is just not advisable with some of the 
+          temperatures we had.  So I've been quite inactive on HF.  I also came to the conclusion
+          that I need to drill a hole into the wall if I want to operate year round.</p>
+        <p>So some plans will be coming up on a bit more permanent station installation.  I really
+          don't have a clue yet what that means in regards to antennas.</p>
+        <p>I did stay active in the hobby tinkering with the aprs igate and an arduino tnc for 
+          transmitting aprs packages.  I also installed a permanent HF stick antenna mount on 
+          my vehicle.  More to come on that later, after I had some experience using it.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">September 1, 2017:</span> New callsign</dt>
+      <dd>
+        Having passed the extra class test I started looking at vanity calls.  The major
+        was to get a call sign that I could easily say without misunderstandings.  Another
+        aspect was the cw weight as I'm hoping to learn morse code and get to operate
+        cw sometime.  Getting a 1x2 or 2x1 call sign is quite hard. Surprisingly
+        the 1x3 callsign that I adopted (K0TET) is quite low in cw weight and
+        tango-echo-tango rolls quite nicely off the tongue.  Hopefully this call
+        sign works out.  You can't really test callsigns on the air until you get it
+        (i.e. I probably shouldn't ID with a fake call sign).
+      </dd>
+
+      <dt> <span class="deemphasize">August 20, 2017:</span> Net control</dt>
+      <dd>
+        <p>With the upcoming eclipse the scheduled net control operator was out of town
+          and nobody else has volunteered to run the local net on the 2m repeater.  I
+          took the opportunity to try my hand with it, called out if we had a net control and
+          if not volunteered myself.</p>
+        <p>The tricky parts for me was to log everybody's call sign as I haven't really
+          burned any of them into my brain.  The other thing is that I'm way to much on HF
+          and am used to the international radiotelephony alphabet.  On top of that I wasn't
+          expecting 13 check ins.</p>
+        <p>Running the net turned out not to difficult since I could follow the published
+          script and read of some of the upcoming events. Hardest part would have been accepting
+          formal traffic like an ARRL radiogramm and routing it appropriately.  Luckily there
+          was no formal traffic. </p>
+        <p>I enjoyed having had this experience.  The next thing I'll have to do sometime is
+          to send send an radiogram to somebody but I haven't figured out to whom.  I did receive
+          a radiogram already after I passed my technician and general tests while I checked into
+          the net of the neighbouring town.  That was a surprise and pretty awesome.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">August 13, 2017:</span> North American QSO Party SSB </dt>
+      <dd>
+        <p>I participated in the North American QSO Party.  It was a lot of fun.  I mostly did
+        search and pounce since the few times I called CQ didn't get me much results.  The
+        antenna setup was field day style with th2 20m hanging low between the house and a tree
+        and the 40m being a inverted V with the clothesline antenna and the 35ft fibreglass
+        military mast.  I totalled 92 QSOs including Chile on 20m and Hawaii both on 20 and 40m.</p>
+
+        <p>Of course my call sign (KE0LMQ) was challenging as usual but worse off is my first name
+        which is part of the exchange.  I tried to spell it whenever possible but still I wonder
+        how many people logged it incorrectly and how many QSOs will be disqualified because of
+        it.  Next phone contest I'll choose an easier name like Ed or Sam.</p>
+
+        <p>The contest wore me out quite a bit though so I skipped the RTTY Rookie Roundup.  My
+        wife did that contest but as usual with the Rookie Roundups it was not a very happening
+        event.  She did get a station in Hawaii as well though.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">August 13, 2017:</span> Amateur Extra </dt>
+      <dd>
+        <p>Yesterday my wife and I passed the Amateur Extra test.  To celebrate we participated
+        in the local club's fox hunt and attended the club potluck.  It was tricky to get a
+        signal of the fox at all but eventually we did hear the fox and found it fairly quickly.</p>
+
+        <p>Since I'm having trouble communicating my callsign KE0LMQ, Quebec is a hard one for me
+        to pronounce and for some strange reason the Lima gets lost sometimes.  After looking
+        at available callsigns I decided to apply for K0TET with the hopes that my pronunciation
+        of that call is better and it will be a good CW call sign.  It turned out that this
+        technician eligible callsign is has a lower cw weight that quite a few of the shorter
+        amateur extra call signs.</p>
+
+        <p>Yes the next challenge is to learn cw.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">June 25, 2017:</span> ARRL Field Day </dt>
+      <dd>
+        <p>I was the Gota (GET On The Air) station chair.  As a newly licensed ham I also got to
+        make contacts myself with that station, although I had to wait till night as we had plenty
+        of other people on the station.  I made about 100 QSOs, mostly PSK31 since I was next to
+        our phone station.  Phone is more fun but also harder and slower than digital.  On top of
+        that it gets less points if you chase scores.  I thought I was capped at a 100 QSOs but
+        it's just that bonus points aren't awarded after that.  No regrets thought, I needed to gets
+        some sleep sometime.</p>
+
+        <p>Field Day was great.  I got to experience the difficulties of running multiple station at
+        close proximity, see the benefit of band pass filters, get some awesome dutch oven cooking,
+        and get to camp with the family.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">May 12, 2017:</span> First Portable Operation </dt>
+      <dd>
+        <p>Over lunch hour I went to a local park to test out the new to me Yaesu FT-857D
+        as a portable station on the 10 meter band.  I set up a home made dipole vertically
+        with the help of a kite pole and bicycle repair stand.  My wife was at home on the
+        Icom IC-7300 and a horizontal dipole.</p>
+
+        <p>First contact was on 29.600 Mhz, the FM simplex calling frequency. The strange thing
+        was that after my wife was done talking there was another voice transmission. That
+        happened several times and finally I heard a call sign and decided to talk directly
+        with him.  As it turned out I could hear that third station but, most likely because
+        of antenna polarization, my wife didn't hear that station.  It was pretty neat to hear
+        another station on 10m since so far I haven't heard any activity on that band.</p>
+
+        <p>We played around a bit more on the band.  Trying out different modes (AM, SSB) and
+        see how low power we could go before loosing any quality with FM (about 5 watts).
+        My lunch hour exploration barely made a dent into the jump start battery that I was
+        using.</p>
+        <div class="center">
+          <a href="2017-05-12-station.jpg"><img src="2017-05-12-station-small.jpg" alt="Portable station" /></a>
+          <a href="2017-05-12-antenna.jpg"><img src="2017-05-12-antenna-small.jpg" alt="Portable antenna" /></a>
+        </div>
+      </dd>
+
+      <dt> <span class="deemphasize">April 30, 2017:</span> Cook Islands </dt>
+      <dd>
+        <p>Today I heard 51 in a call sign that was calling CQ on 20m. I was
+        wondering why he’s saying two numbers since our call sign format only allows
+        for one number. Finally I realized that it’s not an US call sign. I made
+        contact with that station in Cook Islands which is 6,000 miles from me.
+        My distance record so far.</p>
+
+        <p>When I told my daughter about this she was extremely excited, especially
+        since earlier today she build the 20m dipole I was using.</p>
+      </dd>
+
+      <dt> <span class="deemphasize">April 16, 2017:</span> SSB Rookie Roundup</dt>
+      <dd>
+        <p>This was my first contest that I really participated.  Before that I did
+        answer a few CQs that were contesting and even submitted the contacts to
+        MOQP and MSQP.  Since my wife also just got her general class license we
+        had to share our radio during the Rookie Roundup.  The band had a lot of
+        static and we had to work quite hard for our contacts.  Luckily I got the
+        last few minutes and caught up and passed her. She had 16 contacts and I got
+        20.  Both of us made our first "international" contact with stations in
+        Canada.  My confirmed QSL with Alaska (2,600 miles) was pretty awesome,
+        although it took a lot of patience to make it happen.</p>
+        <div class="center">
+          <img src="2017-04-16-rookie-roundup.png" alt="Rookie Roundup Certificate" />
+        </div>
+      </dd>
+    </dl>
+
+    </div>
+  </body>
+</html>

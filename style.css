@@ -1,0 +1,100 @@
+* {box-sizing:border-box}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  margin:0;
+}
+
+hr {
+   border: 0;
+   height: 1px;
+   background-image: linear-gradient(to right, rgba(153, 204, 255, 0), rgba(153, 204, 255, 1), rgba(153, 204, 255, 0));
+}
+
+blockquote {
+  font: italic 14px/22px normal helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
+
+#content-container {
+  margin:40px;
+}
+
+.inline {
+  display: inline;
+}
+
+h3 {
+  font-size: xx-large;
+  font-style: italic;
+  color: #6699cc;
+}
+
+dt {
+  margin-top: 40px;
+  font-size: x-large;
+}
+
+ol li:before,
+dt .deemphasize {
+  color: #888888;
+}
+
+dd {
+  margin: 20px;
+}
+
+div.center {
+  text-align: center
+}
+
+/* Status Indicators */
+.status-not-started:after {
+  content: "Status: Not Started";
+  color: white;
+  background-color: #95a5a6;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.status-on-hold:after {
+  content: "Status: On Hold";
+  color: white;
+  background-color: #e67e22;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.status-active:after {
+  content: "Status: Active";
+  color: white;
+  background-color: #2ecc71;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.status-abandoned:after {
+  content: "Status: Abandoned";
+  color: white;
+  background-color: #9b59b6;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.status-completed:after {
+  content: "Status: Completed";
+  color: white;
+  background-color: #3498db;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 2px 4px;
+  font-size: 12px;
+}
