@@ -4,6 +4,12 @@
   margin: auto;
 }
 
+.menu-image img {
+	height: 200px;
+	width: 600px;
+}
+	
+
 .menu-button {
   padding: 4px 8px;
   text-align: center;
