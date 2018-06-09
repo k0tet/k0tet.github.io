@@ -52,20 +52,56 @@
     <div id="content-container">
     
   <body>
-    <h3 class="status-active">Yaesu Bluetooth CAT Interface</h3>
+    <h3 class="status-completed">Yaesu Bluetooth CAT Interface</h3>
     <p>
-      I've seen a few projects that add bluethooth support for the CAT interface.  I'm mainly looking at using my android phone to control
-      the radio via bluetooth.  For computer work I most likely still use a wired CAT cable. <br />
-      <br />
-      At this point I'm still in the planning stage, trying to figure out how to hook up the HC-05 bluetooth module to the mini-DIN connector.
+	  Adding bluetooth support for the CAT interface of my Yaesu FT-857d sounded quite interesting, especially for repeater usage while traveling.
+	  I was really close to buying one from K6VHF but somehow I missed the opportunity and he hasn't been selling any for a while.  
     </p>
+	<p>
+	  Working with the bare HC-05 module is a pain so I decided to go with one that is mounted on the base board.  The base board allows the HC-05
+	  module be powered with 5V but the RX/TX signal are still only 3.3V which is a bummer.  I decided to use level shifters for the signal lines to 
+	  convert the 5V signals from the Yaesu to/from the 3.3V signals of the bluetooth module.  Of course this setup means two voltage regulators 
+	  since I needed 5V and 3.3V.  Tip on the voltage regulators: The spec sheets show the pin layout from the bottom of the LP package, something 
+	  I didn't noticed right away.
+    </p>
+	<p>
+	  	  <a href="yaesu-bluetooth-cat-interface-1.jpg"><img alt="Yaesu Bluetooth CAT Interface" src="yaesu-bluetooth-cat-interface-1-small.jpg"></a>
+	  	  <a href="yaesu-bluetooth-cat-interface-2.jpg"><img alt="Yaesu Bluetooth CAT Interface" src="yaesu-bluetooth-cat-interface-2-small.jpg"></a>
+	  	  <a href="yaesu-bluetooth-cat-interface-3.jpg"><img alt="Yaesu Bluetooth CAT Interface" src="yaesu-bluetooth-cat-interface-3-small.jpg"></a>
+	</p>
+	<p>
+	  Note: The RepeaterBook app is locked to specific MAC addresses of bluetooth modules.  So only BlueCAT dongles can be used with the app.
+	</p>
     <p>
-	  <h4>Resources:</h4>
+      <h4>Parts List</h3>
+      <ul>
+	    <li>(1) HC-05 Bluetooth Module with base board</li>
+		<li>(1) 4 Channel bi-directonal locic level converter for 5V to 3.3V</li>
+        <li>(1) Voltage regulator 5V (LP2950-50LPRE3)</li>
+        <li>(1) Voltage regulator 3.3V (LP2950-33LPRE3)</li>
+		<li>(2) 2.2uF elecrolytic capacitor</li>
+		<li>(1) 3.3uF elecrolytic capacitor</li>
+		<li>(1) 6 pin long legged female header</li>
+		<li>(1) 8 pin mini DIN male connector
+		<li>4-wire cable (for mini Din connector)
+		<li>short jumper wires</li>
+      </ul>
+	  <h4>Circuit Diagram and Prefboard (PCB) Layout</h4>
+	  <p>
+	    <a href="Yaesu FT-8x7 Bloothooth Cat Interface Circuit Diagram and Board.pdf">Yaesu FT-8x7 Bloothooth Cat Interface Circuit Diagram and Board.pdf</a>
+	  </p>
+      <h4>Other Resources:</h4>
 	  <ul>
-	    <li><a href="https://www.yo3ggx.ro/btcat/FT8x7_DIY_Bluetootth_CAT_interface_v1.pdf">Yaesu FT-8x7 DIY Bluetooth-CAT micro-miniature interface</a> (pdf)  by YO3GGX</li>
-		<li><a href="https://k6vhf.com/simple-bluetooth-cat-interface/">Simple Bluetooth CAT Interface</a> by K6VHF</li>
+        <li><a href="https://www.yo3ggx.ro/btcat/FT8x7_DIY_Bluetootth_CAT_interface_v1.pdf">Yaesu FT-8x7 DIY Bluetooth-CAT micro-miniature interface</a> (pdf)  by YO3GGX</li>
+        <li><a href="https://k6vhf.com/simple-bluetooth-cat-interface/">Simple Bluetooth CAT Interface</a> by K6VHF</li>
         <li><a href="http://www.martyncurrey.com/hc-05-and-hc-06-zs-040-bluetooth-modules-first-look/">HC-05 and HC-06 zs-040 Bluetooth modules. First Look</a></li>
         <li><a href="http://www.martyncurrey.com/?wpdmdl=2436">Bluetooth Modules</a>EGBT-045MS is equivalent to HC-05 and EGBT-046S is equivalent to HC-06</li>
+      </ul>
+	  <h4>Interesting Notes</h4>
+	  <ul>
+	    <li>The Yaesu uses 5V and the HC-05 uses 3.3V for the serial communication. While the Yaesu would fry the HC-05 by applying to high of a voltage to the HC-05's RXD pin, the HC-05's TXD pin should be able to be directly connected to Yaesu's RXD pin as the 3.3V should be enough to cause a locical one.
+	    <li>The Yaesu FT-857 supplies 5V on the RX pin eventhough the radio is turned off.</li>
+		<li>From the BlueCAT FAQ it sounds like they are using the RX pin of the Yaesu to power the bluetoon interface, which is interesting as this eliminates the need for one voltage regulator.  Although I'm not sure how that works since it's a signal port and therefore the voltage difference won't alway be 5v.</li>
 	  </ul>
 	</p>
 
