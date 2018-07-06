@@ -29,7 +29,7 @@
   },
   "homepage": "https://k0tet.github.io/",
   "devDependencies": {
-    "concurrently": "^3.5.1",
+    "concurrently": "^3.6.0",
     "fs-extra": "^6.0.1",
     "gh-pages": "^1.2.0",
     "http-server": "^0.11.1",
