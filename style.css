@@ -1,5 +1,10 @@
 * {box-sizing:border-box}
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
   font-family: Verdana, Geneva, sans-serif;
   margin:0;
