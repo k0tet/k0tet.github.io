@@ -21,6 +21,10 @@
   border-radius: 10px
 }
 
+.menu-image {
+    height: 200px;
+}
+
 .active, .menu-button:hover {
   background-color: #99ccff; 
 }

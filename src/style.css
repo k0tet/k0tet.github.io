@@ -25,6 +25,39 @@ blockquote {
   border-left: 3px solid #ccc;
 }
 
+#upper_left {
+	position: absolute;
+	top: 0; 
+    left: 0;
+    margin: 40px;
+}
+
+#upper_right {
+	position: absolute;
+	top: 0;
+	right: 0%;
+    margin: 40px;
+}
+
+.call_sign {
+    font-size: 72px;
+    font-family: 'Allerta', sans-serif;
+    text-shadow: 4px 4px 4px #aaa;  
+    text-align: center;
+}
+
+.amateur_station {
+    font-size: 20px;
+    font-family: 'Allerta', sans-serif;
+    color: #6699cc;
+    text-align: center;
+}
+
+@media screen and (max-width: 1160px) {
+    #upper_left {display: none;}
+    #upper_right {display: none;}
+}
+
 #content-container {
   margin:40px;
 }
