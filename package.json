@@ -30,7 +30,7 @@
   "homepage": "https://k0tet.github.io/",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^8.0.1",
     "gh-pages": "^2.0.1",
     "http-server": "^0.11.1",
     "klaw": "^3.0.0",
