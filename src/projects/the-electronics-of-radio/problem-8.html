@@ -1,0 +1,68 @@
+<!-- build:title -->The Electronics of Radio: Problem 8 - Series Resonance<!-- /build:title -->
+<!-- build:content -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <h3 class="status-completed">The Electronics of Radio: Problem 8 - Series Resonance</h3>
+    <p>
+      This is part of my "lab report" while I was studying with the book "The Electronics of Radio". <a href="index.html">Overview and list of all lab reports.</a>
+    </p>
+	<p>
+	  <h4>A:</h4>
+	  <p>
+	    Tuned to the lowest voltage, which is at resonance of the series LC circuit, the measured voltage is 260mV.
+		<br/>
+		<a href="problem-8a-setup.jpg"><img alt="The Electronics of Radio: Problem 8A Setup" src="problem-8a-setup-small.jpg"></a>
+		<br/>
+
+        To calculate the resistance of the LC circuit one needs to realize that the internal circuit of the function generator has a resistance of 50 Ohms.  [Thanks to Nick WA5BDU for explaining this fact to me].  Seeing that we have the following circuit it is easy to do the calculation.
+		<br/>
+		<a href="problem-8a-schemantic.jpg"><img alt="The Electronics of Radio: Problem 8A Schemantic" src="problem-8a-schemantic-small.jpg"></a>
+		<br/>
+	  
+        $$I_f={V_F \over R_f + R_{LC}}$$
+        $$I_{LC}={V_{LC} \over R_{LC}}$$
+        <center>since is the same in a series circuit</center>
+        $$I_f = I_{LC}$$
+        <center>we can calculate the resistance based on the current</center>
+        $${V_F \over R_f + R_{LC}}={V_{LC} \over R_{LC}}$$
+        $${1V \over 50Ω + R_{LC}}={0.26V \over R_{LC}}$$
+        $${R_{LC} \over 0.26} = 50 + R_{LC}$$
+        $$R_{LC} = 13 + 0.26R_{LC}$$
+        $$R_{LC} - 0.26R_{LC} = 13$$
+        $$ 1 - 0.26 = {13 \over R_{LC}}$$
+        $$ R_{LC} = {13 \over 0.74} = {\underline {\underline {17.57Ω}}}$$
+	  
+	    Next step is to measure this calculated number.  Of course DC measurements are pointless.  Using an antenna analyzer I changed the antenna analyzer's frequency until reactance (X) was zero which append at 7.192MHz and got a resistance (R) of 14.1 Ohm.  Doing the calculation in reverse the voltage across the LC at resonance would be 220mV.  Knowing how hard it was to adjust the variable capacitor it's quite in the tolerance of my ability to adjust the capacitor for resonance.
+		<br/>
+		<a href="problem-8a-antenna-analyzer-measurement.jpg"><img alt="LC resistance measurement at resonance with antenna analyzer" src="problem-8a-antenna-analyzer-measurement-small.jpg"></a>
+      </p>
+      <p><u>Bonus:</u> Calculating capacitance at resonance.</p>
+	  <p>
+	    <center>We know</center>
+		$$X_L= 2πfL$$
+        $$X_C = {1 \over 2πfC}$$
+		<center>and at resonance</center>
+		$$X_C = X_L$$
+		<center>again a straight forward calculation</center>
+		$$2πfL = {1 \over 2πfC}$$
+        $$C = {1 \over 4π^2f^2L}$$
+        $$C = {1 \over 4π^2(7x10^6)^2(15x10^{-6})}$$
+        $$C = {\underline {\underline {34.5pF}}}$$
+	    Using a LCR meter I measured the variable capacitor at 34pF.
+		<br/>
+		<a href="problem-8a-capacitance-measurement.jpg"><img alt="Capacitance measurement with LCR meter" src="problem-8a-capacitance-measurement-small.jpg"></a>
+	</p>
+	<p>
+	  <h4>B:</h4>
+	  <p>
+	    I measured the highest voltage of 440mV.  This was again at the resonance frequency (i.e. variable capacitor at 34pF).
+		<br/>
+		<a href="problem-8b-setup.jpg"><img alt="The Electronics of Radio: Problem 8B Setup" src="problem-8b-setup-small.jpg"></a>
+		<br/>
+		This time our circuit has three resistors in series: the internal resistance of the function generator \(R_f\) with 50 Ohms, the internal resistance of the inductor and capacitor \(R_{LC}\) with 17.57 Ohms, and the resistance of the load \(R_L\) with 50 ohms.
+        $$ {V_L \over R_L} = {V_F \over {R_F + R_{LC} + R_L}}$$
+        $$ {V_L \over 50Ω} = {1V \over {50Ω + 17.57Ω +50Ω}}$$
+        $$ {V_L} = {50 \over 117.57} = {\underline {\underline {0.425V}}}$$		
+	  </p>
+
+<!-- /build:content -->
