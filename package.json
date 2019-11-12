@@ -12,8 +12,9 @@
     }
   },
   "scripts": {
-    "dev": "concurrently -n \"WATCH,HTTP\" \"npm run watch\" \"npm run http\"",
-    "http": "http-server dist -a localhost -o",
+    "start": "concurrently -n \"WATCH,HTTP\" \"npm run watch\" \"npm run http\" \"npm run open\"",
+    "http": "serve dist",
+    "open": "sleep 3 && start http://localhost:5000",
     "watch": "npm-watch",
     "build": "node build.js",
     "deploy": "node build.js && gh-pages -d dist -b master"
@@ -29,11 +30,11 @@
   },
   "homepage": "https://k0tet.github.io/",
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^5.0.0",
     "fs-extra": "^8.0.1",
     "gh-pages": "^2.0.1",
-    "http-server": "^0.11.1",
     "klaw": "^3.0.0",
-    "npm-watch": "^0.6.0"
+    "npm-watch": "^0.6.0",
+    "serve": "^11.2.0"
   }
 }
