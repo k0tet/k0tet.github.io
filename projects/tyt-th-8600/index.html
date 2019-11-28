@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[K0TET] TYT TH-8600 Tips and Hints</title>
+    <meta name="description" content="Offial page of the amateur radio (ham) station K0TET featuring experiments, projects, publications, blog and station information">
+    <meta name="google-site-verification" content="dv5RKiVqsej9VWfRGw1rU6y43fp3Spg9ULgLUUZQLtQ" />
+    <meta name="msvalidate.01" content="36B677FC5749023331AF1AAD8126392C" />
+    <script src="/lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="/menu/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/menu/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet"> 
+
+  </head>
+
+  <body>
+    <div id="upper_left">
+      <div class="call_sign">K0TET</div>
+      <div class="amateur_station">Amateur Radio Station</div>
+    </div>
+    
+    <div id="upper_right">
+      <div class="call_sign">K0TET</div>
+      <div class="amateur_station">Amateur Radio Station</div>
+    </div>
+    
+    <div class="menu-container">
+      <div class="menu-image fade" data-menu="home">
+        <img src="/menu/home.png">
+      </div>
+      <div class="menu-image fade" data-menu="qsl" style="display:none">
+        <img src="/menu/qsl.png">
+      </div>
+      <div class="menu-image fade" data-menu="antennas" style="display:none">
+        <img src="/menu/antennas.png">
+      </div>
+      <div class="menu-image fade" data-menu="station" style="display:none">
+        <img src="/menu/station.png">
+      </div>
+      <div class="menu-image fade" data-menu="projects" style="display:none">
+        <img src="/menu/projects.png">
+      </div>
+      <div class="menu-image fade" data-menu="publications" style="display:none">
+        <img src="/menu/publications.png">
+      </div>
+      <div class="menu-image fade" data-menu="journal" style="display:none">
+        <img src="/menu/journal.png">
+      </div>
+      <br />
+      <div style="text-align:center">
+        <a class="menu-button" data-menu="home" href="/">Home</a>
+        <a class="menu-button" data-menu="qsl" href="/qsl/">QSL</a>
+        <a class="menu-button" data-menu="antennas" href="/antennas/">Antennas</a>
+        <a class="menu-button" data-menu="station" href="/station/">Station</a>
+        <a class="menu-button" data-menu="projects" href="/projects/">Projects</a>
+        <a class="menu-button" data-menu="publications" href="/publications/">Publication</a>
+        <a class="menu-button" data-menu="journal" href="/journal/">Journal</a>
+      </div>
+    </div>
+
+    <hr />
+    <div id="content-container">
+    
+    <h3 class="status-active">TYT TH-8600 Tips and Hints</h3>
+    <p>
+      There doesn't seem to be a good place for documentation, tips and hints for the TYT TH-8600 amateur radio.
+	  This page is my attempt to put together all the information about this radio.
+    </p>
+	
+    <dl>
+      <dt>Frequency Unlocking</dt>
+      <dd>
+	    <p>Apparently TYT locks new radios sold in the USA to 150-160MHz VHF and 450-460MHz UHF. 
+		In order to use them for the amatuer radio services the transceiver needs to be unlocked.
+		My unit was used and already setup for the ham bands so I haven't verified the unlocking 
+		procedure myself.</p>
+		<p>To unlock make sure that the TH-8600 is turned off. Hold the "LO" (top left) button and 
+		   the "A/B" (bottom right) button while turning the TH-8600 on.</p>
+	  </dd>
+      
+	  <dt>Software</dt>
+	  <dd>
+	    <p>The TYT provides several downloads for the TH-8600 at <a href="http://www.tyt888.com/?mod=download">http://www.tyt888.com/?mod=download</a>,
+        however there isn't much description to what these downloads are.  Here's my take on these files.  The date is the date and title match that on
+        the download page.</b>
+		<ul>
+		  <li><b>2019-01-07 TH-8600 FOR USA</b>
+            <p>Contains the "TH-8600_20171206 .exe" which is the "V1.5" version of the programming software.  The 
+            installation program needs to run as administrator. [Yes, that's not good practice].  After install, the
+            local user can be granted write access to the installation directory of the programming software.  This
+            allows regular users to use the software and makes things a little less bad.</p>
+            <p>Installing the programming software also places the Prolific USB driver installed in that directory.
+            I did not thest this driver since I already had a Prolific USB driver installed.</p>
+            <a href="tyt-th-8600-programming-software.jpg"><img src="tyt-th-8600-programming-software-small.jpg" alt="TYT TH-8600 Programming Software" /></a>
+            <p>The download also contains the "Th8600_UpdataFile2018_12_07_2_20JT.icf" firmware and the installer program "TH-8600_UpData.exe" in the
+            "Update File" directory.  I'm not sure what updates this firmware contains and I haven't had the guts to install it yet. If you have more
+            info please let me know.</p>
+		    <a href="tyt-th-8600-firmware-upgrade.jpg"><img src="tyt-th-8600-firmware-upgrade-small.jpg" alt="TYT TH-8600 Firmware Upgrade" /></a>
+            <p>Readable "instruction.doc" describing the firmware installation procedure: <a href="tyt-th-8600-firmware-upgrade-instructions.pdf">download</a></p>
+            <p>Local mirror: <a href="2019-01-07_Updated_firmware_for_band_and_VFO.zip">download</a></p>
+		  </li>
+		  <li><b>2018-10-16 TH-8600 LCD software</b>
+		    <p>This is a little utility to determine and set the LCD display type.  Apparently there are three different 
+		    types of LCDs.</p>
+		    <img src="tyt-th-8600-lcd-select.jpg" alt="TYT TH-8600 LCD Software" />
+            <p> To use this utility choose the COM port in "Settings" -> "ComPort Select". Then click the "Read LCD" button.
+		    At this point the message "TETS MOD" is displayed on the LCD of the TH-8600. The drop down list will have the 
+		    LCD type listed that is currently being used. Select other LCD types via the drop down list as desired.  Click 
+		    the "Exit Test" button to finalize the selection and close the connection.</p>
+		    <img src="tyt-th-8600-lcd-1.jpg" alt="TYT TH-8600 in LCD 1 mode" />
+		    <img src="tyt-th-8600-lcd-2.jpg" alt="TYT TH-8600 in LCD 2 mode" />
+		    <img src="tyt-th-8600-lcd-3.jpg" alt="TYT TH-8600 in LCD 3 mode" />
+		    <p> My tranceiver uses the "LCD 3". "LCD 1" is upside down and "LCD 2" is mirrored for me.  I guess this 
+		    feature allows for some interesting customizations or projects with the radio.</p>
+		    <p>Local mirror: <a href="2018-10-16_TYT_TH-8600_LCD_Select_PC.zip">download</a></p>
+		  </li>
+          <li><b>2017-10-19 TH-8600 software 170817<b>
+            <p>Contains the "TH-8600_Test .exe" which is the older version "V1.2" of the programming software.
+            There exists also a "USB Driver" folder that appears to have drivers for Windows 98ME, XP, Vista, and 7.</p>
+            <p>Local mirror: <a href="2017-10-19_TH-8600_software_170817.zip">download</a></p>
+          </li>
+          <li><b>2017-05-06 TH-8600 software<b>
+            <p>Contains the "TH-8600 .exe" which is the older version "V1.1" of the programming software.</p>
+            <p>Local mirror: <a href="2017-05-06_Software.zip">download</a></p>
+          </li>
+		  <li><b>2016-09-08 TH-8600</b>
+		    <p>Just the pamphlet for the radio.</p>
+			<img src="TH-8600_Pamphlet-small.jpg" alt="TYT TH-8600 Pamphlet" />
+			<p>Local mirror: <a href="TH-8600_Pamphlet.jpg">download</a></p>
+		  </li>
+    </dl>
+
+    </div>
+  </body>
+</html>
