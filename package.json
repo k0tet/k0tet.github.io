@@ -1,7 +1,7 @@
 {
-  "name": "k0tet-website",
-  "version": "3.0.0",
-  "description": "Source for the K0TET website",
+  "name": "cqqrz-website",
+  "version": "4.0.0",
+  "description": "Source for the CQQRZ website",
   "watch": {
     "build": {
       "patterns": [
@@ -21,16 +21,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k0tet/k0tet-website.git"
+    "url": "git+https://github.com/cqqrz/cqqrz.github.io.git"
   },
   "author": "Claus Niesen",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/k0tet/k0tet-website/issues"
+    "url": "https://github.com/cqqrz/cqqrz.github.io/issues"
   },
-  "homepage": "https://k0tet.github.io/",
+  "homepage": "https://cqqrz.github.io/",
   "devDependencies": {
-    "concurrently": "^5.0.0",
+    "concurrently": "^5.0.2",
     "fs-extra": "^8.0.1",
     "gh-pages": "^2.0.1",
     "klaw": "^3.0.0",
