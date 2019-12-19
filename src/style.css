@@ -58,6 +58,25 @@ blockquote {
     #upper_right {display: none;}
 }
 
+@media screen and (min-width: 700px) {
+    .home_info {
+        display: flex; 
+        justify-content: space-around;
+    }
+}
+
+@media not screen and (min-width: 700px) {
+    .home_info > div {
+        margin-bottom: 50px; 
+    }
+}
+
+.operator_name {
+    font-size: xx-large;
+    font-weight: bold;
+    color: crimson;
+}
+
 #content-container {
   margin:40px;
 }
