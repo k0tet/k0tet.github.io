@@ -30,8 +30,13 @@ klaw('src')
 function applyTemplate(filePath) {
         var content = fs.readFileSync(filePath).toString();
         var mergedContent = template.replace(templateRegex, function (match, templateTagName) {
-            var find = content.match(generateContentRegex(templateTagName));
-            return find ? find[1] : match;
+			if (templateTagName === "redirectUrl") {
+				var urlPath = path.relative('src', filePath).replace("\\", "/").replace("/index.html", "/");
+				return "https://cqqrz.github.io/" + urlPath;
+			} else {
+				var find = content.match(generateContentRegex(templateTagName));
+				return find ? find[1] : match;
+			}
         } )
     return mergedContent;
 }
